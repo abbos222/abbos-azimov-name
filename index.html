@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Личный портфолио Аббоса Азимова, юриста в IT-компании. Опыт, компетенции, контакты.">
+    <meta name="keywords" content="Азимов Аббос, юрист, IT, портфолио, резюме">
+    <meta name="author" content="Азимов Аббос">
+    <title>Азимов Аббос - Личный портфолио</title>
+    <!-- Подключаем Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Шрифты FORUM и Mulish из референса -->
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Иконки для контактов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Forum', 'serif'],
+                        sans: ['Mulish', 'sans-serif'],
+                    },
+                    colors: {
+                        'main-bg': '#f5f5f0', /* Темно-кремовый фон */
+                        'secondary-bg': '#ffffff', /* Белый для карточек */
+                        'accent-blue': '#4a5568', /* Темно-синий/серый для акцентов */
+                        'text-dark': '#362C27', /* Темно-коричневый текст */
+                        'text-secondary': '#718096', /* Серый текст */
+                        'timeline-line': '#e2e8f0', /* Светлая линия для таймлайна */
+                    },
+                    boxShadow: {
+                        '3xl': '0 10px 20px rgba(0, 0, 0, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f5f5f0;
+            font-family: 'Mulish', sans-serif;
+            color: #362C27;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        h1, h2 {
+            font-family: 'Forum', serif;
+        }
+        /* Стили для печати */
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+        /* Увеличенный отступ для текста в timeline, чтобы кружок не перекрывал */
+        .timeline-item {
+            padding-left: 2rem; /* Увеличенный отступ */
+        }
+        .timeline-circle {
+            left: -12px; /* Позиционирование кружка */
+        }
+    </style>
+</head>
+<body class="bg-main-bg text-text-dark font-sans antialiased">
+    <div class="relative min-h-screen">
+        <div class="relative container mx-auto px-4 py-8 md:py-16">
+            <!-- Главный блок с фото и заголовком -->
+            <header class="text-center mb-16">
+                <div class="flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-8">
+                    <img src="https://placehold.co/150x150/ffffff/000000?text=AB" alt="Фото Аббоса Азимова" class="w-36 h-36 rounded-full object-cover border-4 border-accent-blue shadow-lg mb-4 md:mb-0">
+                    <div class="text-center md:text-left">
+                        <h1 class="text-5xl md:text-6xl font-heading text-text-dark leading-tight tracking-wide">
+                            Азимов Аббос
+                        </h1>
+                        <p class="text-2xl md:text-3xl mt-2 font-light text-text-secondary">
+                            Юрист в IT-компанию
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Основной контент -->
+            <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Контакты и О себе - Левая колонка -->
+                <div class="lg:col-span-1 space-y-8">
+                    <!-- О себе -->
+                    <section id="about" class="bg-secondary-bg p-8 rounded-lg shadow-3xl border border-gray-200">
+                        <h2 class="text-3xl font-heading text-accent-blue mb-4">О себе</h2>
+                        <p class="text-base text-text-secondary">Возраст: 25 лет. Город: Ташкент, Узбекистан / Москва, Россия. Гражданство: Узбекистан. Готовность: Готов к переезду, командировкам. Занятость: Полная.</p>
+                    </section>
+
+                    <!-- Контакты -->
+                    <section id="contact" class="bg-secondary-bg p-8 rounded-lg shadow-3xl border border-gray-200">
+                        <h2 class="text-3xl font-heading text-accent-blue mb-4">Контакты</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-4 text-text-dark">
+                                <i class="fas fa-phone text-accent-blue text-xl"></i>
+                                <span>+998 (33) 709-95-63</span>
+                            </li>
+                            <li class="flex items-center gap-4 text-text-dark">
+                                <i class="fas fa-envelope text-accent-blue text-xl"></i>
+                                <span>abogroup2000@gmail.com</span>
+                            </li>
+                            <li class="flex items-center gap-4 text-text-dark">
+                                <i class="fab fa-telegram text-accent-blue text-xl"></i>
+                                <a href="https://t.me/abbos_azimov" class="hover:text-accent-blue transition-colors">Telegram</a>
+                            </li>
+                            <li class="flex items-center gap-4 mt-6">
+                                <a href="CV_AZIMOV_ABBOS_.pdf" download class="w-full bg-accent-blue text-white text-center py-3 rounded-lg hover:bg-blue-600 transition-colors font-bold">Скачать резюме (PDF)</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- Основные секции - Правая колонка -->
+                <div class="lg:col-span-2 space-y-8">
+                    <!-- Ключевые компетенции -->
+                    <section id="competencies" class="bg-secondary-bg p-8 rounded-lg shadow-3xl border border-gray-200">
+                        <h2 class="text-3xl font-heading text-accent-blue mb-6">Ключевые компетенции</h2>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-base text-text-dark">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Договорная работа (оферты, подряды, лицензии, SaaS, NDA, SHA, SPA)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Претензионная и исковая работа</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Юридическое сопровождение IT-компаний и цифровых проектов</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Корпоративное и налоговое право, сопровождение сделок</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Консультирование топ-менеджмента, правовые заключения (Legal Memos)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Анализ и структурирование бизнес-моделей, compliance</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Опыт взаимодействия с ЦБ, ФНС, ПАО, регистраторами, госорганами РФ и РУз</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Свободная работа с Консультант+, Гарант, Lex.uz</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Опыт работы -->
+                    <section id="experience" class="bg-secondary-bg p-8 rounded-lg shadow-3xl border border-gray-200">
+                        <h2 class="text-3xl font-heading text-accent-blue mb-6">Опыт работы</h2>
+                        <div class="relative border-l-2 border-timeline-line pl-10 space-y-8">
+                            <!-- Каждое место работы -->
+                            <div class="relative timeline-item">
+                                <div class="absolute timeline-circle top-0 w-6 h-6 bg-accent-blue rounded-full"></div>
+                                <h3 class="text-xl font-semibold text-text-dark">Юрист</h3>
+                                <p class="text-text-secondary">АВФ Консалтинг (сопровождение инновационных и IT компаний)</p>
+                                <p class="text-sm text-text-secondary mb-2">Июль 2024 — настоящее время (1 год 2 месяца)</p>
+                                <ul class="list-disc list-inside space-y-1 text-text-secondary">
+                                    <li>Сопровождение 50+ инновационных компаний в сфере IT, финтеха, медицины и производства в рамках проекта ИНТЦ (ФЗ-216), со выручкой от 30 до 500 млн руб. в год</li>
+                                    <li>Разработал налоговые схемы, позволившие снизить налоговую нагрузку в среднем на 20–25%, с общей экономией более 100 млн руб. для компаний-резидентов</li>
+                                    <li>Провёл аудит интеллектуальных прав и подготовил 10+ лицензионных соглашений на ПО, а также договоры услуг (SaaS-модели)</li>
+                                    <li>Консультировал команды по вопросам чистоты прав на ПО, научно-технологической направленности, взаимодействия с МГУ и налоговыми органами</li>
+                                    <li>Подготовил правовые заключения, участвовал в переговорах, обеспечивал соответствие контрактов требованиям законодательства</li>
+                                </ul>
+                            </div>
+                            <div class="relative timeline-item">
+                                <div class="absolute timeline-circle top-0 w-6 h-6 bg-accent-blue rounded-full"></div>
+                                <h3 class="text-xl font-semibold text-text-dark">Юрист</h3>
+                                <p class="text-text-secondary">ООО "Лигал Корпус Партнерс" (юридическая фирма, сопровождение сделок и бизнеса)</p>
+                                <p class="text-sm text-text-secondary mb-2">Сентябрь 2022 — Июнь 2024 (1 год 10 месяцев)</p>
+                                <ul class="list-disc list-inside space-y-1 text-text-secondary">
+                                    <li>Участвовал в сопровождении регистрации публичного статуса для 3 крупных АО, включая подготовку проспектов ценных бумаг и раскрытие информации по стандартам ЦБ РФ</li>
+                                    <li>Участвовал в юридической проверке (due diligence) сделок в сфере строительства, химического производства и агроотрасли</li>
+                                    <li>Разрабатывал и согласовывал корпоративные договоры и опционы, обеспечивая правовую защиту клиентов при распределении долей в уставном капитале</li>
+                                    <li>Регистрация юридических лиц, внесение изменений, взаимодействие с регистрирующими органами</li>
+                                    <li>Участие в претензионной работе, составление правовых заключений, консалтинг для клиентов по гражданскому, корпоративному и трудовому праву</li>
+                                </ul>
+                            </div>
+                            <div class="relative timeline-item">
+                                <div class="absolute timeline-circle top-0 w-6 h-6 bg-accent-blue rounded-full"></div>
+                                <h3 class="text-xl font-semibold text-text-dark">Помощник юриста</h3>
+                                <p class="text-text-secondary">АО "Uzelectroapparat-electroshield"</p>
+                                <p class="text-sm text-text-secondary mb-2">Май 2022 — Август 2022 (4 месяца)</p>
+                                <ul class="list-disc list-inside space-y-1 text-text-secondary">
+                                    <li>Подготовка и проверка договоров, допсоглашений, претензий</li>
+                                    <li>Консультирование по трудовому праву, подготовка кадровых документов</li>
+                                    <li>Анализ НПА, судебной практики, подготовка справок и заключений</li>
+                                </ul>
+                            </div>
+                            <div class="relative timeline-item">
+                                <div class="absolute timeline-circle top-0 w-6 h-6 bg-accent-blue rounded-full"></div>
+                                <h3 class="text-xl font-semibold text-text-dark">Менеджер по взаимодействию с клиентами</h3>
+                                <p class="text-text-secondary">HUMANS Companies, Узбекистан</p>
+                                <p class="text-sm text-text-secondary mb-2">Февраль 2021 — Август 2021 (7 месяцев)</p>
+                                <ul class="list-disc list-inside space-y-1 text-text-secondary">
+                                    <li>Коммуникация с клиентами, консультирование по продуктам</li>
+                                    <li>Анализ запросов, решение спорных и конфликтных ситуаций</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Образование -->
+                    <section id="education" class="bg-secondary-bg p-8 rounded-lg shadow-3xl border border-gray-200">
+                        <h2 class="text-3xl font-heading text-accent-blue mb-6">Образование</h2>
+                        <div class="space-y-4">
+                            <div class="bg-main-bg p-6 rounded-lg shadow-lg border border-gray-300">
+                                <h3 class="font-semibold text-xl text-text-dark">Магистр, НИУ ВШЭ (Москва)</h3>
+                                <p class="text-text-secondary">Факультет права, направление: Корпоративное право</p>
+                                <p class="text-sm text-text-secondary mt-1">2026 (ожидается)</p>
+                            </div>
+                            <div class="bg-main-bg p-6 rounded-lg shadow-lg border border-gray-300">
+                                <h3 class="font-semibold text-xl text-text-dark">Бакалавр, НИУ ВШЭ (Москва)</h3>
+                                <p class="text-text-secondary">Факультет права, направление: Юриспруденция</p>
+                                <p class="text-sm text-text-secondary mt-1">2023</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Навыки -->
+                    <section id="skills" class="bg-secondary-bg p-8 rounded-lg shadow-3xl border border-gray-200">
+                        <h2 class="text-3xl font-heading text-accent-blue mb-6">Навыки</h2>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-base text-text-dark">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Консультант+, Гарант, Lex.uz</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Составление договоров, сопровождение сделок</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Корпоративное право, трудовое право, защита интересов в спорах</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Подготовка правовых заключений, переговоры, работа с ИС</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-accent-blue"></i>
+                                <span>Работа в многозадачном режиме, высокая организованность</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
